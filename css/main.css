@@ -21,9 +21,9 @@ html {
   box-sizing: border-box;
 }
 *,
-*::before,
+*::before
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 } 
 
 
@@ -189,8 +189,31 @@ html {
 .advantages-box:not(:last-child) {
   margin-right: 30px;
 }
-.advantages-logo {
+.advantages-box::before {
+  display: block;
+  content: '';
   margin-bottom: 30px;
+  height: 120px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #F5F4FA;
+}
+.advantages-box.antenna::before {
+  background-image: url(../images/Antenna-1.svg);
+  background-size: 70px 70px;
+}
+.advantages-box.clock::before {
+  background-image: url(../images/clock-1.svg);
+  background-size: 70px 70px;
+}
+.advantages-box.diagram::before {
+  background-image: url(../images/diagram-1.svg);
+  background-size: 70px 70px;
+}
+.advantages-box.group::before {
+  background-image: url(../images/astronaut-1.svg);
+  background-size: 70px 70px;
 }
 .advantages-list .title {
   margin-bottom: 10px;
