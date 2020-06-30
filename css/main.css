@@ -317,6 +317,32 @@ html {
   line-height: 19px;
   letter-spacing: 0.03em;
 }
+.social-link-team {
+  display: inline-block;
+  height: 44px;
+  width: 44px;
+  margin-right: 10px;
+  background-color: inherit;
+  border-radius: 50%;
+  
+}
+.icon-instagram {
+  width: 20px;
+  height: 20px;
+  
+}
+.icon-twitter {
+  width: 20px;
+  height: 20px;
+}
+.icon-facebook {
+  width: 20px;
+  height: 20px;
+}
+.icon-linkedin {
+  width: 20px;
+  height: 20px;
+}
 
 /* Секция Постоянные клиенты */
 .section.clients {
