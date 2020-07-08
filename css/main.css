@@ -2,9 +2,10 @@
   --primary-text-color: #757575;
   --title-text-color: #212121;
   --title-secondary-text-color: #ffffff;
-  --primary-background-color: #e5e5e5;
+  --primary-background-color: #ffffff;
   --accent-bg-color: #F5F4FA;
   --accent-color: #2196f3;
+  --icons-color: #AFB1B8;
 }
 body {
   background-color: var(--primary-background-color);
@@ -85,49 +86,43 @@ html {
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
-  color: #2196f3;
+  color: var(--accent-color);
 }
 .site-nav .link.current {
-    color: #2196f3;
+    color: var(--accent-color);
 }
 
 /* Контакты */
 .contacts {
   display: flex;
   margin-left: auto;
+  font-style: normal;
 }
 .contacts a {
   color: #212121;
 }
-.contacts .tipe + .tipe {
-  margin-left: 30px;
 
+.contacts a:hover,
+.contacts a:focus {
+  color: var(--accent-color);
+  fill: var(--accent-color);
 }
-.contacts .tipe:hover,
-.contacts .tipe:focus { 
-  color: #2196f3;
+
+.mail-box {
+  margin-right: 30px;
 }
-.tipe.mail::before {
+
+.icon-mail{
   display: inline-block;
-  content: '';
   margin-right: 10px;
   width: 16px;
   height: 10px;
-  background-image: url(../images/envelope.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
-.tipe.phone::before {
+.icon-smartphone {
   display: inline-block;
-  content: '';
   margin-right: 10px;
   width: 10px;
   height: 13px;
-  background-image: url(../images/smartphone.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 /* Герой */
@@ -209,31 +204,17 @@ html {
 .advantages-box:not(:last-child) {
   margin-right: 30px;
 }
-.advantages-box::before {
-  display: block;
-  content: '';
+.advantages-items {
+  text-align: center;
   margin-bottom: 30px;
   height: 120px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #F5F4FA;
+  padding-top: 25px;
+  background-color: var(--accent-bg-color);
+  border-radius: 4px;
 }
-.advantages-box.antenna::before {
-  background-image: url(../images/Antenna-1.svg);
-  background-size: 70px 70px;
-}
-.advantages-box.clock::before {
-  background-image: url(../images/clock-1.svg);
-  background-size: 70px 70px;
-}
-.advantages-box.diagram::before {
-  background-image: url(../images/diagram-1.svg);
-  background-size: 70px 70px;
-}
-.advantages-box.group::before {
-  background-image: url(../images/astronaut-1.svg);
-  background-size: 70px 70px;
+.advantages-box-items {
+  width: 70px;
+  height: 70px;
 }
 .advantages-list .title {
   margin-bottom: 10px;
@@ -329,24 +310,46 @@ html {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  
+}
+.social-link-team:hover,
+.social-link-team:focus {
+  fill: var(--icons-color);
 }
 .icon-instagram {
   width: 20px;
   height: 20px;
-  
+  fill: var(--icons-color)
+}
+.icon-instagram:hover,
+.icon-instagram:focus {
+  fill: var(--title-secondary-text-color);
 }
 .icon-twitter {
   width: 20px;
   height: 20px;
+  fill: var(--icons-color)
+}
+.icon-twitter:hover,
+.icon-twitter:focus {
+  fill: var(--title-secondary-text-color);
 }
 .icon-facebook {
   width: 20px;
   height: 20px;
+  fill: var(--icons-color)
+}
+.icon-facebook:hover,
+.icon-facebook:focus {
+  fill: var(--title-secondary-text-color);
 }
 .icon-linkedin {
   width: 20px;
   height: 20px;
+  fill: var(--icons-color)
+}
+.icon-linkedin:hover,
+.icon-linkedin:focus {
+  fill: var(--title-secondary-text-color);
 }
 
 /* Секция Постоянные клиенты */
@@ -361,6 +364,23 @@ html {
 .clients-box:not(:last-child) {
   margin-right: 30px;
 }
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  width: 170px;
+  border: 1px solid var(--icons-color); 
+  border-radius: 4px;
+  fill: var(--icons-color);
+}
+.clients-link:hover {
+  fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+
+
 
 /* Футтер */
 
@@ -438,7 +458,7 @@ html {
   .tipe-address {
     padding: 0px;
     margin: 0px;
-    color: #ffffff;
+    color: var(--title-secondary-text-color);
   }
   .footer-title {
     padding: 0px;
@@ -459,61 +479,47 @@ html {
 
   .social-link {
     padding: 0px;
-    color: #ffffff;
+    color: var(--title-secondary-text-color);
     background-color: rgba(255, 255, 255, 0.1);
   } 
-  .social-link:hover,
-  .social-link:focus {
-    background-color: #2196f3;
-  }
-  .social-link.instagram {
-    display: inline-block;
-    height: 44px;
-    width: 44px;
-    background-image: url(../images/icon-instagram.svg);
-    background-size: 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
-  }
-  .social-link.twitter {
-    display: inline-block;
-    height: 44px;
-    width: 44px;
-    background-image: url(../images/icon-twitter.svg);
-    background-size: 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
-  }
-  .social-link.facebook {
-    display: inline-block;
-    height: 44px;
-    width: 44px;
-    background-image: url(../images/icon-facebook.svg);
-    background-size: 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
-  }
-  .social-link.linkedIn {
-    display: inline-block;
-    height: 44px;
-    width: 44px;
-    background-image: url(../images/icon-linkedin.svg);
-    background-size: 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
-  }
+
   .social-link-box li:not(:last-child) {
     margin-right: 10px;
   }
-
-  .social-link:hover,
-  .social-link:focus {
-      color: #2196f3;
+ 
+  .social-link.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
   }
+  .social-link-box a:hover {
+    color: var(--icons-color);
+  }
+  .instagram-footer {
+    width: 20px;
+    height: 20px;
+    fill: var(--title-secondary-text-color);
+  }
+  .twitter-footer {
+    width: 20px;
+    height: 20px;
+    fill: var(--title-secondary-text-color);
+  }
+  .facebook-footer {
+    width: 20px;
+    height: 20px;
+    fill: var(--title-secondary-text-color);
+  }
+  .linkedin-footer {
+    width: 20px;
+    height: 20px;
+    fill: var(--title-secondary-text-color);
+  }
+
   .button.footer::after {
     display: inline-block;
     content: '';
@@ -557,8 +563,8 @@ html {
   }
   .radio-button:hover,
   .radio-button:focus {
-    background-color: #2196f3;
-    color: #ffffff;
+    background-color: var(--accent-color);
+    color: var(--title-secondary-text-color);
   }
   .projects {
     display: flex;
