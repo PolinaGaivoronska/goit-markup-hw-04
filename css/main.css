@@ -22,7 +22,7 @@ html {
   box-sizing: border-box;
 }
 *,
-*::before
+*::before,
 *::after {
   box-sizing: border-box;
 } 
@@ -161,7 +161,6 @@ html {
   display: inline-block;
   border-radius: 4px;
   padding: 10px 32px;
-
   background-color: var(--accent-color);
   color: var(--title-secondary-text-color);
   letter-spacing: 0.06em; 
@@ -170,6 +169,7 @@ html {
   font-size: 16px;
   line-height: 30px;
   min-width: 200px;
+  cursor: pointer;
 }
 
 /* Секции */
@@ -266,6 +266,14 @@ html {
   padding-left: 0px;
   margin: 0px;
 }
+.team-box {
+  width: calc((100% - 90px) / 4);
+  padding-bottom: 24px;
+  background-color: var(--primary-background-color);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
+}
+
 .team-box:not(:last-child) {
   margin-right: 30px;
 }
@@ -279,6 +287,14 @@ html {
 }
 .team-photo {
   margin-bottom: 30px;
+}
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.title.team {
+  text-align: center
 }
 .team-list .title {
   padding: 0px;
@@ -297,10 +313,13 @@ html {
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.03em;
+  text-align: center;
 }
 .social-box {
   display: flex;
-  flex-direction: row;
+  text-align: center;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 .social-link-team {
   display: flex;
@@ -311,9 +330,8 @@ html {
   height: 44px;
   border-radius: 50%;
 }
-.social-link-team:hover,
-.social-link-team:focus {
-  fill: var(--icons-color);
+.social-link-team:hover {
+  background-color: var(--accent-color);
 }
 .icon-instagram {
   width: 20px;
@@ -497,7 +515,7 @@ html {
     border-radius: 50%;
   }
   .social-link-box a:hover {
-    color: var(--icons-color);
+    background-color: var(--accent-color);
   }
   .instagram-footer {
     width: 20px;
@@ -520,18 +538,29 @@ html {
     fill: var(--title-secondary-text-color);
   }
 
-  .button.footer::after {
+  .button.footer {
     display: inline-block;
-    content: '';
-    margin-left: 10px;
-    width: 24px;
-    height: 24px;
-    background-image: url(../images/icon-send.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    border-radius: 4px;
+    padding: 10px 32px;
 
+    background-color: var(--accent-color);
+    color: var(--title-secondary-text-color);
+    letter-spacing: 0.06em; 
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+    min-width: 200px;
   }
+
+  .button-icon {
+    margin-left: 10px;
+    height: 24px;
+    width: 24px;
+    fill: var(--title-secondary-text-color);
+  }
+
+
   /* Стили для portfolio.html */
 
   .portfolio-header {
@@ -553,10 +582,17 @@ html {
     padding: 0px;
   }
   .radio-button {
-    border-radius: 4px;
+    display: inline-block;
     padding: 6px 22px;
+    min-width: 73px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    text-align: center;
     background-color: #F5F4FA;
     color: #212121;
+    border: 1px solid transparent; 
+    border-radius: 4px;
   }
   .projects-button li:not(:last-child) {
     margin-right: 8px;
@@ -572,10 +608,16 @@ html {
     padding: 0px;
     margin: 0px;
   }
+  .projects-link {
+  
+  }
   .projects-item {
     width: calc((100% - 60px) / 3);
     margin-right: 30px;
     margin-bottom: 30px;
+    background-color: var(--primary-background-color);
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 0px 0px 4px 4px;
   }
   .projects-item:nth-child(3n) {
     margin-right: 0px;
@@ -589,7 +631,7 @@ html {
     margin-bottom: 20px;
   }
   .project-title {
-    padding: 0px;
+    padding-left: 24px;
     margin-top: 0px;
     margin-bottom: 15px;
     font-weight: 700;
@@ -599,9 +641,9 @@ html {
     color: var(--title-text-color);
   }
   .text-secondary {
-    display: none;
-    padding: 0px;
+    padding-left: 24px;
     margin: 0px;
+    display: none;
     font-weight: normal;
     font-size: 18px;
     line-height: 1.5;
@@ -609,7 +651,7 @@ html {
     color: var(--title-secondary-text-color);
   }
   .text-primary {
-    padding: 0px;
+    padding-left: 24px;
     margin-top: 0px;
     margin-bottom: 20px;
     font-weight: normal;
